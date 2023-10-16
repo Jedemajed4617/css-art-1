@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0; /* Place it behind the .peetje element */
+}
+
+.container__word {
+  position: absolute;
+  animation: float linear infinite;
+}
+
+.container__floatingword {
+  position: absolute;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: red;
+  }
+}
+@keyframes moveShadow {
+  0% {
+    text-shadow: 2px 2px red;
+  }
+  50% {
+    text-shadow: 2px 2px grey;
+  }
+  100% {
+    text-shadow: 2px 2px red;
+  }
+}
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.peetje__text {
+  animation: colorChange 3s linear infinite, scaleText 3s ease infinite, moveShadow 3s ease infinite;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li, a {
+  font-size: inherit;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+.peetje {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Place it on top of other elements */
+}
+
+.peetje__text {
+  font-size: 6rem;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

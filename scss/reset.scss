@@ -1,0 +1,47 @@
+@use 'animations';
+
+$font-size-root: 62.5%;
+$background-color-body: black;
+$text-color: white;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li, a {
+    font-size: inherit;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+html {
+    font-size: $font-size-root;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background-color-body;
+    color: $text-color;
+    position: relative;
+}
+
+.peetje {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    &__text {
+        font-size: 6rem;
+        margin: 0;
+    }
+}
